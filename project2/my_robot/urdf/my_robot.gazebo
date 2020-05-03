@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <robot>
 
-  <!-- <gazebo>
+  <gazebo>
     <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
       <legacyMode>false</legacyMode>
       <alwaysOn>true</alwaysOn>
@@ -24,7 +24,7 @@
       <publishTf>1</publishTf>
       <publishOdomTF>true</publishOdomTF>
     </plugin>
-  </gazebo> -->
+  </gazebo>
 
 
   <gazebo>
@@ -39,6 +39,9 @@
       <wheelDiameter>0.2</wheelDiameter>
       <robotBaseFrame>robot_footprint</robotBaseFrame>
       <torque>20</torque>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
       <topicName>cmd_vel</topicName>
       <broadcastTF>false</broadcastTF>
     </plugin>
